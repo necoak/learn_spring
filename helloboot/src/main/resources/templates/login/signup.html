@@ -9,10 +9,49 @@
 </head>
 <body>
 
-サインアップ
+    <h1>ユーザ登録画面</h1>
 
-    <form method="post" action="signup">
-        <!-- TODO: サインアップフォーム -->
+    <form method="post" action="/signup">
+        <!-- TODO: サインアップフォーム(Model関連付け) -->
+        <table>
+            <tr>
+                <th>ユーザID</th>
+                <th>
+                    <input type="text" name="user_id"/>
+                </th>
+            </tr>
+            <tr>
+                <th>パスワード</th>
+                <th>
+                    <input type="password" name="password"/>
+                </th>
+            </tr>
+            <tr>
+                <th>ユーザ名</th>
+                <th>
+                    <input type="text" name="user_name"/>
+                </th>
+            </tr>
+            <tr>
+                <th>誕生日</th>
+                <th>
+                    <input type="date" name="birthdate"/>
+                </th>
+            </tr>
+            <tr>
+                <th>年齢</th>
+                <th>
+                    <input type="number" name="age"/>
+                </th>
+            </tr>
+            <tr>
+                <th>結婚</th>
+                <th>
+                    <input type="radio" name="marriged">既婚</input>
+                    <input type="radio" name="marriged">未婚</input>
+                </th>
+            </tr>
+        </table>
         <button class="btn btn-primary" type="submit">ユーザ登録</button>
     </form>
 </body>
