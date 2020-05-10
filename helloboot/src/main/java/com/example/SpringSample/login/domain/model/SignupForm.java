@@ -11,7 +11,7 @@ public class SignupForm {
     private String userId;
     private String password;
     private String userName;
-    @DateTimeFormat
+    @DateTimeFormat(pattern = "yyy/MM/dd")
     private Date birthdate;
     private int age;
     private boolean marriage;

@@ -11,44 +11,44 @@
 
     <h1>ユーザ登録画面</h1>
 
-    <form method="post" action="/signup">
-        <!-- TODO: サインアップフォーム(Model関連付け) -->
+    <form method="post" action="/signup" th:object="${signupForm}">
+        <!-- TODO: サインアップフォーム(Model関連付け)  -->
         <table>
             <tr>
                 <th>ユーザID</th>
                 <th>
-                    <input type="text" name="user_id"/>
+                    <input type="text" name="user_id" th:field="*{userId}"/>
                 </th>
             </tr>
             <tr>
                 <th>パスワード</th>
                 <th>
-                    <input type="password" name="password"/>
+                    <input type="password" name="password" th:field="*{password}" />
                 </th>
             </tr>
             <tr>
                 <th>ユーザ名</th>
                 <th>
-                    <input type="text" name="user_name"/>
+                    <input type="text" name="user_name" th:field="*{userName}"/>
                 </th>
             </tr>
             <tr>
                 <th>誕生日</th>
                 <th>
-                    <input type="date" name="birthdate"/>
+                    <input type="text" name="birthdate" placeholder="yyyy/MM/dd" th:field="*{birthdate}"/>
                 </th>
             </tr>
             <tr>
                 <th>年齢</th>
                 <th>
-                    <input type="number" name="age"/>
+                    <input type="number" name="age"  th:field="*{age}"/>
                 </th>
             </tr>
             <tr>
                 <th>結婚</th>
                 <th>
-                    <input type="radio" name="marriged">既婚</input>
-                    <input type="radio" name="marriged">未婚</input>
+                    <input type="radio" name="marriged"  value="false" th:field="*{marriage}">既婚</input>
+                    <input type="radio" name="marriged"  value="true" th:field="*{marriage}">未婚</input>
                 </th>
             </tr>
         </table>
