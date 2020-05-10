@@ -12,6 +12,13 @@
     <h1>ユーザ登録画面</h1>
 
     <form method="post" action="/signup" th:object="${signupForm}">
+
+        <ul>
+            <li th:each="error: ${#fields.detailedErrors()}">
+                <span style="color:#ff0000;" th:text="${error.message}">Error message</span>
+            </li>
+        </ul>
+
         <!-- TODO: サインアップフォーム(Model関連付け)  -->
         <table>
             <tr>
