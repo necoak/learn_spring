@@ -20,7 +20,6 @@ public class SignupController {
     public String getSignUp(@ModelAttribute SignupForm form, Model model){
         logger.info("getSignUp");
 
-        // TODO: Model実装
         logger.info(form.toString());
 
         return "login/signup";
