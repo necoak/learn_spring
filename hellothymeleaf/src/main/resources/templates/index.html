@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>インデックス</title>
+</head>
+<body>
+    <ul>
+        <li>
+            <p><a th:href="@{'/hello/'}">Helloページ</a></p>
+        </li>
+        <li>
+            <p><a th:href="@{'/fixedgreeting/'}">固定挨拶ページ</a></p>
+        </li>
+        <li>
+            <p><a th:href="@{'/greeting/'}">挨拶ページ</a></p>
+        </li>
+        <li>
+            挨拶ページ(動的)-GETメソッド-
+            <form th:action="@{/greeting}" method="GET">
+                <label>メッセージ</label>
+                <input type="text" name="message"></input>
+                <input type="submit" value="送信">
+            </form>
+        </li>
+    </ul>
+
+</body>
+</html>
